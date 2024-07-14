@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для отслеживания финансов</title>
+    <link rel="stylesheet" href="src/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-color-primary text-color-white tracking-wider">
+    <header class="sticky top-0 z-50 bg-color-primary-dark">
+        <nav class="container flex justify-between items-center">
+            <div class="py-5 text-color-secondary font-bold text-3xl">
+                <a href="#home">
+                    <span class="text-color-secondary">Money</span>Flow
+                </a>
+            </div>
+
+            <!-- PC menu -->
+            <div class="">
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a href="#home" class="hover:text-color-secondary ease-in duration-200">Главная</a></li>
+                    <li><a href="#features" class="hover:text-color-secondary ease-in duration-200">Преимущества</a>
+                    </li>
+                    <li><a href="#testimonial" class="hover:text-color-secondary ease-in duration-200">Отзывы</a></li>
+                    <li><a href="#pricing" class="hover:text-color-secondary ease-in duration-200">Цены</a></li>
+                    <li><a href="#blog" class="hover:text-color-secondary ease-in duration-200">Блог</a></li>
+                    <li><a href="#contact" class="hover:text-color-secondary ease-in duration-200">Контакты</a></li>
+                    <li>
+                        <button
+                            class="bg-color-secondary px-9 py-3 rounded-md font-bold hover:opacity-80 ease-in duration-200">Попробовать</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tablet menu -->
+            <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div id="menu" class="hidden bg-color-primary-dark h-[70vh] absolute inset-0">
+                <ul class="h-full grid place-items-center py-20">
+                    <li><a id="hlink" href="#home" class="hover:text-color-secondary ease-in duration-200">Главная</a>
+                    </li>
+                    <li><a id="hlink" href="#features"
+                            class="hover:text-color-secondary ease-in duration-200">Преимущества</a></li>
+                    <li><a id="hlink" href="#testimonial"
+                            class="hover:text-color-secondary ease-in duration-200">Отзывы</a></li>
+                    <li><a id="hlink" href="#pricing" class="hover:text-color-secondary ease-in duration-200">Цены</a>
+                    </li>
+                    <li><a id="hlink" href="#blog" class="hover:text-color-secondary ease-in duration-200">Блог</a></li>
+                    <li><a id="hlink" href="#contact"
+                            class="hover:text-color-secondary ease-in duration-200">Контакты</a></li>
+                    <li>
+                        <button class="btn">Попробовать</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="relative">
+            <div class="blob1"></div>
+            <div class="blob2"></div>
+            <div class="container py-20">
+                <div class="flex flex-col items-center z-20 md:flex-row">
+                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                        <h1 class="title mb-4">Приложение для быстрого отслеживания ваших расходов и доховб а также
+                            контроля за своим финансовым положением.</h1>
+                        <p class="leading-relaxed mb-10">В бесплатной версии можно вести учёт доходов и расходов в
+                            рублях, долларах и евро, добавлять счета, с которых оплачивали покупки, устанавливать
+                            напоминания.</p>
+                        <button class="btn">Загрузить</button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./src/img/hero4.png" alt="#!">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="bg-color-primary-light">
+            <div class="container py-20">
+                <div class="text-center m-auto mb-20 md:w-1/2">
+                    <h4 class="font-bold text-color-secondary mb-4">Все под контролем</h4>
+                    <h1 class="title">Легко управляйте финансами, ставьте цели или задавайте лимиты</h1>
+                </div>
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                        <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="text-xl font-bold py-4">Планирование</h3>
+                        <p class="leading-relaxed">Устанавливайте лимиты на расходы, ставьте цели, добавляйте разные
+                            счета</p>
+                    </div>
+
+                    <div
+                        class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                        <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold py-4">Подробные отчеты</h3>
+                        <p class="leading-relaxed">Смотрите различную статистику доходов и расходов в диаграммах.</p>
+                    </div>
+
+                    <div
+                        class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                        <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="text-xl font-bold py-4">Поддержка 24/7</h3>
+                        <p class="leading-relaxed">Если что-то пойдет не так и вам нужна будет помощь, то мы всегда на
+                            связи</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative" id="features">
+            <div class="blob1 sm:!left-48 !opacity-20"></div>
+            <div class="blob2 sm:!right-48 !opacity-20"></div>
+            <div class="container py-20">
+                <div class="flex flex-col items-center z-20 md:flex-row">
+                    <div class="md:w-1/2">
+                        <img src="./src/img/hero3.png" alt="#!">
+                    </div>
+                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                        <p class="font-bold text-color-secondary mb-4">Экономия</p>
+                        <h1 class="title mb-4">Лучшее приложение для учета финансов, чтобы сэкономить ваши деньги</h1>
+                        <p class="leading-relaxed mb-10">Лучшее финансовое приложение в мире. Простое в использовании и очень удобное. Вы можете легко управлять своей картой и отправлять деньги кому-либо одним кликом.</p>
+                        <button class="btn" srs="#">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-10 text-center m-auto bg-color-primary-light" id="features">
+            <div class="container">
+                <p class="font-bold text-color-secondary mb-4">Как это работает</p>
+                <h1 class="title mb-20">Три очень простых шага</h1>
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+
+                    <div class="lg:after:content-[''] lg:after:flex lg:after:bg-[url('../img/line.png')] lg:after:absolute lg:after:top-8 lg:after:left-[70%] 2xl:after:left-[80%] lg:after:bg-no-repeat lg:after:h-7 lg:after:w-52 relative">
+                        <p class="text-5xl bg-color-primary-dark inline-block py-2 px-5 hover:bg-color-secondary ease-in duration-200 rounded-md">
+                            1</p>
+                        <h3 class="py-5 font-bold">Установите приложение</h3>
+                        <p class="">Доступно для устаноки для смартфонов IOS и Android</p>
+                    </div>
+
+                    <div
+                        class="lg:after:content-[''] lg:after:flex lg:after:bg-[url('../img/line-bottom.png')]
+                        lg:after:absolute lg:after:top-8 lg:after:left-[70%] 2xl:after:left-[80%] lg:after:bg-no-repeat
+                        lg:after:h-7 lg:after:w-52 relative">
+                        <p
+                            class="text-5xl bg-color-primary-dark inline-block py-2 px-5 hover:bg-color-secondary ease-in duration-200 rounded-md">
+                            2</p>
+                        <h3 class="py-5 font-bold">Создайте профиль</h3>
+                        <p class="">Заполните нужные поля и подтвердите свои данные</p>
+                    </div>
+
+                    <div class="">
+                        <p
+                            class="text-5xl bg-color-primary-dark inline-block py-2 px-5 hover:bg-color-secondary ease-in duration-200 rounded-md">
+                            3</p>
+                        <h3 class="py-5 font-bold">Наслаждайтесь возможностями!</h3>
+                        <p class="">В платной версии нет ограничений на количество активов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial">
+            <div class="container py-20">
+                <div class="text-center m-auto mb-20 md:w-1/2">
+                    <h4 class="font-bold text-color-secondary mb-4">Отзывы</h4>
+                    <h1 class="title">Что клиенты говорят о нашем приложении после его использования</h1>
+                </div>
+                <div class="mt-8">
+                    <div class="flex items-center justify-center flex-wrap">
+                        <img src="./src/img/user1.jpg" alt="image"
+                            class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic"
+                            onclick="showRewiew()">
+                        <img src="./src/img/user2.jpg" alt="image"
+                            class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showRewiew()">
+                        <img src="./src/img/user3.jpg" alt="image"
+                            class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showRewiew()">
+                        <img src="./src/img/user4.jpg" alt="image"
+                            class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showRewiew()">
+                        <img src="./src/img/user5.jpg" alt="image"
+                            class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showRewiew()">
+                    </div>
+                    <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+                        <div class="user-text active-text">
+                            <p class="md:text-2xl mb-6">Это лучшее приложение по архитектуре, простоте, удобстве
+                                использования и информативности! Единственное из десятка подобных протестированных,
+                                которое действительно помогает, легко и быстро, а не грузит графиками, меню, подменю и
+                                прочим абсолютно не нужным мусором. Убедительная просьба: не испортите его!</p>
+                            <h4 class="font-bold text-color-secondary mb-1">Мария Лебедева</h4>
+                            <p>Менеджер</p>
+                        </div>
+                        <div class="user-text">
+                            <p class="md:text-2xl mb-6">Пользуюсь данной программой уже полтора года. Она невероятно
+                                удобная, проста в освоении и гибко настраиваемая под каждого человека. Я даже купила
+                                про-версию чтобы поддержать разработчика ну и получить приятные бонусы в виде код-пароля
+                                и кучи новых, красивых иконок. Спасибо вам за это приложение! </p>
+                            <h4 class="font-bold text-color-secondary mb-1">Екатерина Кочина</h4>
+                            <p>Администратор</p>
+                        </div>
+                        <div class="user-text">
+                            <p class="md:text-2xl mb-6">Остановился на данном и почти сразу же купил подписку LifeTime -
+                                чему очень рад. Купил и не думаешь. Но что самое крутое что весь основной функционал
+                                доступен и в бесплатной версии. Очень радует обратная связь от автора и то что принимает
+                                советы на будущее.</p>
+                            <h4 class="font-bold text-color-secondary mb-1">Павел Музалев</h4>
+                            <p>Оператор</p>
+                        </div>
+                        <div class="user-text">
+                            <p class="md:text-2xl mb-6">Очень полезная вещь - Счета. Тут можно увидеть все счета, с
+                                которых ведётся оплата в домовладении: карты членов семьи, наличка, вклады и т.д. Также
+                                можно скрывать что-то из общей суммы. Я, например, вклады не включаю в общую картину.
+                                Мне очень не хватает функции расчёта распределения оставшихся денег по дням. Конечно,
+                                есть калькулятор, но пользоваться одновременно и приложением для финансов и
+                                калькулятором не очень удобно. В приложении есть реклама, но её немного. </p>
+                            <h4 class="font-bold text-color-secondary mb-1">Оксана Янкина</h4>
+                            <p>Секретарь</p>
+                        </div>
+                        <div class="user-text">
+                            <p class="md:text-2xl mb-6">Наконец у меня есть возможность вести финансы так, как мне
+                                нужно, а не так, как видит разработчик. В первый же день купил про версию ради пары
+                                фишек. Завел все свои карты и счета, функция группировки счетов вообще космос. Спасибо
+                                разработчикам"</p>
+                            <h4 class="font-bold text-color-secondary mb-1">Никита Петрачков</h4>
+                            <p>Программист</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="bg-color-primary-light">
+            <div class="container py-20">
+                <div class="text-center m-auto mb-20 md:w-1/2">
+                    <h4 class="font-bold text-color-secondary mb-4">Прайс</h4>
+                    <h1 class="title">Выбирайте тариф для своих целей</h1>
+
+                    <div class="mt-5 flex items-center justify-center gap-4">
+                        <p>За месяц</p>
+                        <label class="cursor-pointer relative inline-block w-20 h-8 rounded-full">
+                            <input type="checkbox" id="toggleBtn" class="peer opacity-0 w-0 h-0">
+                            <span
+                                class="absolute top-0 left-0 right-0 bottom-0 bg-color-primary-light border border-solid border-color-gray rounded-full duration-300 before:content-[''] before:absolute before:w-6 before:h-6 before:bottom-1 before:left-1 before:rounded-full before:bg-color-white before:duration-300 peer-checked:before:translate-x-12 peer-checked:bg-color-secondary"></span>
+                        </label>
+                        <p>За год</p>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+                    <div class="card relative h-auto w-auto">
+                        <div id="card_1_front"
+                            class="front px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">100 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ в месяц</span></p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Базовый</h3>
+                                <p class="leading-relaxed">Для тех, кто хочет протестировать приложение</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                        <div id="card_1_back"
+                            class="back rotate-y-180 px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full absolute top-0 left-0">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">
+                                <p class="text-6xl pl-2 font-bold">1000 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ за
+                                        год</span></p>
+                                </p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Базовый</h3>
+                                <p class="leading-relaxed">Для тех, кто хочет протестировать приложение</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                    </div>
+                    <div class="card relative h-auto w-auto">
+                        <div id="card_2_front"
+                            class="front px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">150 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ в месяц</span></p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Стандарт</h3>
+                                <p class="leading-relaxed">Для тех, кто не хочет платить лишнего</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                        <div id="card_2_back"
+                            class="back rotate-y-180 px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full absolute top-0 left-0">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">
+                                <p class="text-6xl pl-2 font-bold">1400 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ за
+                                        год</span></p>
+                                </p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Стандарт</h3>
+                                <p class="leading-relaxed">Для тех, кто не хочет платить лишнего</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-gray"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                    </div>
+                    <div class="card relative h-auto w-auto">
+                        <div id="card_3_front"
+                            class="front px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">200 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ в месяц</span></p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Премиум</h3>
+                                <p class="leading-relaxed">Для тех, кто хочет использовать весь функционал</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                        <div id="card_3_back"
+                            class="back rotate-y-180 px-7 py-11 rounded-2xl border-2 border-solid border-color-gray h-full w-full absolute top-0 left-0">
+                            <div class="relative">
+                                <p class="text-6xl pl-2 font-bold">
+                                <p class="text-6xl pl-2 font-bold">1800 ₽<span
+                                        class="text-sm font-normal tracking-widest">/ за
+                                        год</span></p>
+                                </p>
+                            </div>
+                            <div class="py-10">
+                                <h3 class="text-xl font-bold pb-3">Премиум</h3>
+                                <p class="leading-relaxed">Для тех, кто хочет использовать весь функционал</p>
+                            </div>
+                            <ul class="space-y-4 pb-10">
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление расходами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Управление картами</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Мгновенная статистика</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Кэшбэк</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-bookmark text-color-secondary"></i>
+                                    <span class="pl-4">Система учета</span>
+                                </li>
+                            </ul>
+                            <button class="card_btn">Оплатить тариф</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container py-20">
+                <div class="text-center m-auto mb-20 md:w-1/2">
+                    <h4 class="font-bold text-color-secondary mb-4">Будь в курсе событий</h4>
+                    <h1 class="title">Полезные новости, обзоры и лайфхаки</h1>
+                </div>
+
+                <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+                            <img src="./src/img/blog1.jpg" alt="image"
+                                class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-5 py-5">
+                                <p>20 Апреля 2024</p>
+                                <p>1 минута на чтение</p>
+                            </div>
+                            <a href="#blog"
+                                class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">Raiffeisen
+                                летом начнет сокращать бизнес в России</a>
+                            <p class="leading-relaxed my-5">Raiffeisen начнет сокращение бизнеса в РФ, на котором
+                                настаивает ЕЦБ, в третьем квартале 2024 года. К 2026-му кредитный портфель его
+                                российской «дочки» должен уменьшиться еще на 65%...</p>
+                            <a href="#blog"
+                                class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                                <span class="-tracking-wider underline hover:no-underline">Читать далее</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+                            <img src="./src/img/blog2.jpg" alt="image"
+                                class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-5 py-5">
+                                <p>20 Апреля 2024</p>
+                                <p>1 минута на чтение</p>
+                            </div>
+                            <a href="#blog"
+                                class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">Как
+                                организовать свой бюджет для максимальной продуктивности?</a>
+                            <p class="leading-relaxed my-5">Одним из наиболее важных шагов в оптимизации бюджета
+                                является оценка ваших финансовых целей. Ваши цели являются движущей силой ваших
+                                бюджетных решений и действий...</p>
+                            <a href="#blog"
+                                class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                                <span class="-tracking-wider underline hover:no-underline">Читать далее</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lg:h-[40vh] rounded-xl scale-100 overflow-hidden">
+                            <img src="./src/img/blog3.jpg" alt="image"
+                                class="lg:h-full w-full hover:scale-125 transition duration-300 ease-in-out">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-5 py-5">
+                                <p>1 Мая 2024</p>
+                                <p>1 минута на чтение</p>
+                            </div>
+                            <a href="#blog"
+                                class="text-2xl font-bold underline hover:text-color-secondary hover:no-underline">Лимит
+                                переводов между своими счетами увеличили до 30 млн</a>
+                            <p class="leading-relaxed my-5">Россияне смогут с 1 мая переводить без комиссии до ₽30 млн
+                                между своими счетами. Эта мера необходима для снижения рисков, когда люди наличными
+                                перекидывают крупные суммы между банками...</p>
+                            <a href="#blog"
+                                class="inline-block font-bold hover:text-color-secondary transition-all duration-300 ease-in-out">
+                                <span class="-tracking-wider underline hover:no-underline">Читать далее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-color-primary-light py-10">
+            <div class="loading min-h-[70vh] container flex justify-center items-center flex-col text-center px-32">
+                <h4 class="font-bold text-color-secondary mb-4">Загрузки</h4>
+                <h1 class="title">Установите приложение и сэкономьте свои деньги</h1>
+                <p class="leading-relaxed my-5">Отличный помощник в деле учета и сокращения расходов, ведения семейного бюджета и изыскании резервов средств для накоплений и инвестирования.</p>
+                <div class="mt-8 flex lg:gap-12 lg:flex-row gap-4 flex-col">
+                    <button srs="#" class="!bg-color-white btn">
+                        <img src="./src/img/ios-store-dark.png" alt="">
+                    </button>
+
+                    <button srs="#" class="!bg-color-white btn">
+                        <img src="./src/img/g-play-dark.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container py-20">
+                <div class="text-center m-auto mb-20 md:w-1/2">
+                    <h4 class="font-bold text-color-secondary mb-4">Обратная связь</h4>
+                    <h1 class="title">Напишите свой вопрос</h1>
+                </div>
+                <form action="">
+                <div class="w-full m-auto text-center md:w-2/3">
+                    <div class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2">
+                        <input type="text" name="" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Имя">
+
+                        <input type="email" name="" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Email">
+
+                        <input type="tel" name="" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Телефон">
+
+                        <input type="text" name="" id="" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary" placeholder="Тариф">
+                    </div>
+
+                    <textarea placeholder="Сообщение" rows="4" name="" id="" class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"></textarea>
+                    <button type="submit" class="btn mt-10">Отправить</button>
+                </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="bg-color-primary-dark relative">
+            <div class="container py-10">
+                <div class="grid gap-10 md:grid-cols-4 pb-10">
+                    <div class="space-y-6">
+                        <h4 class="font-bold text-lg">О приложении</h4>
+                        <p class="leading-relaxed">Приложение для быстрого отслеживания ваших расходов и доходов, а также контроля над своим финансовым положением.</p>
+                        <div class="flex gap-5 items-center">
+                            <p>Соцсети</p>
+                            <i class="fa-brands fa-facebook-f cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-twitter cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-youtube cursor-pointer hover:text-color-secondary"></i>
+                            <i class="fa-brands fa-instagram cursor-pointer hover:text-color-secondary"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-between md:justify-around">
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-lg">Ссылки</h4>
+                            <ul class="space-y-3">
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">Главная</a></li>
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#features">Преимущества</a></li>
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#testimonial">Отзывы</a></li>
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#pricing">Цены</a></li>
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#blog">Блог</a></li>
+                                <li class="underline hover:no-underline hover:text-color-secondary"><a href="#contact">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <h4 class="font-bold text-lg">Поддержка</h4>
+                        <ul class="space-y-3">
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#">О нас</a></li>
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#features">Партнеры</a></li>
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#testimonial">Вакансии</a></li>
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#pricing">Отзывы</a></li>
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#blog">Условия</a></li>
+                            <li class="underline hover:no-underline hover:text-color-secondary"><a href="#contact">Помощь</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h4 class="font-bold text-lg">Узнай первым</h4>
+                        <p class="leading-relaxed">Подпишитесь, чтобы получать полезные новости и уведомления</p>
+                        <div class="flex items-center">
+                            <input type="text" class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none" placeholder="Введите вашу почту">
+                            <button type="submit" class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center pt-10 border-t border-color-gray">
+                    <p>2024 © MoneyFlow. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
